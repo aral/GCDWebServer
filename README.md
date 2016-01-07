@@ -248,7 +248,7 @@ int main(int argc, const char* argv[]) {
     
     GCDWebServer* webServer = [[GCDWebServer alloc] init];
     [webServer addGETHandlerForBasePath:@"/" directoryPath:NSHomeDirectory() indexFilename:nil cacheAge:3600 allowRangeRequests:YES];
-    [webServer runWithPort:8080];
+    [webServer startWithPort:8080 bonjourName: "GCDWebServer Static Server"];
     
   }
   return 0;
